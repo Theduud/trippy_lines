@@ -7,8 +7,8 @@ from SaveGifMod import SaveGif
 import perlin
 import os
 
-WIDTH = 1200
-HEIGHT = 1200
+WIDTH = 600
+HEIGHT = 600
 s = cairo.SVGSurface("surface.svg", WIDTH, HEIGHT)
 c = cairo.Context(s)
 
@@ -109,7 +109,7 @@ for frame in range(0, frames):
             yInc *= -1
     # draw square in center
     r1 = 80
-    r = r1 - (frame * frame / 10000 * r1)
+    r = r1 - r1 * (frame * frame / (frames * frames))
     SetRGB(color2)
     c.translate(WIDTH / 2, HEIGHT / 2)
     c.rotate(math.pi / 4)
