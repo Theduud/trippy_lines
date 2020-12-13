@@ -4,7 +4,6 @@ import random
 import numpy as np
 import sys
 from SaveGifMod import SaveGif
-import perlin
 import os
 
 WIDTH = 600
